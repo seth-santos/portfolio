@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Portfolio – Seth Santos OVOURA</title>
-
 <style>
 body {
   margin: 0;
@@ -28,13 +27,8 @@ header img {
   margin-bottom: 20px;
 }
 
-header h1 {
-  margin: 10px 0 5px;
-}
-
-header p {
-  color: #94a3b8;
-}
+header h1 { margin: 10px 0 5px 0; }
+header p { color: #94a3b8; }
 
 section {
   max-width: 1000px;
@@ -145,6 +139,29 @@ footer {
 .button:hover {
   transform: translateY(-4px) scale(1.06);
   box-shadow: 0 16px 35px rgba(56,189,248,0.6);
+  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+}
+
+.lang-buttons {
+  text-align:center;
+  margin: 20px 0;
+}
+
+.lang-buttons button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #38bdf8;
+  color: #020617;
+  transition: all 0.3s;
+}
+
+.lang-buttons button:hover {
+  background: #0ea5e9;
+  transform: scale(1.05);
 }
 </style>
 </head>
@@ -153,110 +170,119 @@ footer {
 
 <header>
   <img src="moi.jpeg" alt="Photo de Seth Santos OVOURA">
-  <h1>Seth Santos OVOURA</h1>
-  <p>Étudiant en BUT Réseaux & Télécommunications – IUT de Béziers</p>
+  <h1 class="lang-text" data-fr="Seth Santos OVOURA" data-en="Seth Santos OVOURA">Seth Santos OVOURA</h1>
+  <p class="lang-text" data-fr="Étudiant en BUT Réseaux & Télécommunications – IUT de Béziers" data-en="Student in Networks & Telecommunications (BUT) – IUT Béziers">Étudiant en BUT Réseaux & Télécommunications – IUT de Béziers</p>
 </header>
 
+<!-- Boutons de langue -->
+<div class="lang-buttons">
+  <button onclick="switchLang('fr')">FR</button>
+  <button onclick="switchLang('en')">EN</button>
+</div>
+
 <section>
-  <h2>À propos de moi</h2>
+  <h2 class="lang-text" data-fr="À propos de moi" data-en="About Me">À propos de moi</h2>
   <div class="card fade-up">
-    <p>
-      Étudiant en <strong>BUT Réseaux & Télécommunications</strong>, je me forme aux réseaux,
-      systèmes et à la cybersécurité avec pour objectif de devenir
-      <strong>technicien helpdesk</strong>.
-      J’apprécie l’assistance utilisateur, la résolution d’incidents
-      et le travail en équipe.
+    <p class="lang-text" data-fr="Étudiant en <strong>BUT Réseaux & Télécommunications</strong>, je me forme aux réseaux, systèmes et à la cybersécurité avec pour objectif de devenir <strong>technicien helpdesk</strong>. J’apprécie l’assistance utilisateur, la résolution d’incidents et le travail en équipe."
+       data-en="Student in <strong>Networks & Telecommunications (BUT)</strong>, learning networking, systems and cybersecurity to become a <strong>helpdesk technician</strong>. Enjoy assisting users, solving incidents and teamwork.">
+       Étudiant en <strong>BUT Réseaux & Télécommunications</strong>, je me forme aux réseaux, systèmes et à la cybersécurité avec pour objectif de devenir <strong>technicien helpdesk</strong>. J’apprécie l’assistance utilisateur, la résolution d’incidents et le travail en équipe.
     </p>
   </div>
 </section>
 
 <section>
-  <h2>Télécharger mon CV</h2>
+  <h2 class="lang-text" data-fr="Télécharger mon CV" data-en="Download My CV">Télécharger mon CV</h2>
   <div class="card fade-up" style="text-align:center;">
-    <p>Mon CV est disponible au format PDF :</p>
-    <a href="./CV.pdf" download class="button">⬇ Télécharger mon CV</a>
+    <p class="lang-text" data-fr="Mon CV est disponible au format PDF :" data-en="My CV is available in PDF:">Mon CV est disponible au format PDF :</p>
+    <a href="./CV.pdf" download class="button">⬇ <span class="lang-text" data-fr="Télécharger mon CV" data-en="Download My CV">Télécharger mon CV</span></a>
   </div>
 </section>
 
 <section>
-  <h2>Mes formations</h2>
+  <h2 class="lang-text" data-fr="Mes formations" data-en="My Education">Mes formations</h2>
   <div class="grid">
     <div class="card fade-up">
-      <h3>BUT Réseaux & Télécommunications</h3>
-      <p>IUT de Béziers</p>
-      <p><strong>2025 – 2028</strong></p>
+      <h3 class="lang-text" data-fr="BUT Réseaux & Télécommunications" data-en="Networks & Telecommunications (BUT)">BUT Réseaux & Télécommunications</h3>
+      <p class="lang-text" data-fr="IUT de Béziers" data-en="IUT Béziers">IUT de Béziers</p>
+      <p class="lang-text" data-fr="Formation universitaire axée sur les réseaux informatiques, les télécommunications, les systèmes et la cybersécurité."
+         data-en="University program focused on networking, telecommunications, systems and cybersecurity.">Formation universitaire axée sur les réseaux informatiques, les télécommunications, les systèmes et la cybersécurité.</p>
+      <p class="lang-text" data-fr="<strong>Durée :</strong> 2025 – 2028" data-en="<strong>Duration:</strong> 2025 – 2028"><strong>Durée :</strong> 2025 – 2028</p>
     </div>
     <div class="card fade-up">
-      <h3>Baccalauréat</h3>
-      <p>Obtenu en <strong>2025</strong></p>
+      <h3 class="lang-text" data-fr="Baccalauréat" data-en="High School Diploma">Baccalauréat</h3>
+      <p class="lang-text" data-fr="<strong>Obtenu en 2025</strong>" data-en="<strong>Obtained in 2025</strong>"><strong>Obtenu en 2025</strong></p>
+      <p class="lang-text" data-fr="Diplôme de fin d’études secondaires validant les bases scientifiques et méthodologiques nécessaires à la poursuite d’études supérieures."
+         data-en="High school diploma validating scientific and methodological foundations for further studies.">Diplôme de fin d’études secondaires validant les bases scientifiques et méthodologiques nécessaires à la poursuite d’études supérieures.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Mes expériences professionnelles</h2>
+  <h2 class="lang-text" data-fr="Mes expériences professionnelles" data-en="Work Experience">Mes expériences professionnelles</h2>
   <div class="grid">
     <div class="card fade-up">
-      <h3>Environnement informatique</h3>
+      <h3 class="lang-text" data-fr="Environnement informatique" data-en="IT Environment">Environnement informatique</h3>
       <ul>
-        <li>Maintenance informatique</li>
-        <li>Support utilisateur</li>
-        <li>Découverte réseaux</li>
+        <li class="lang-text" data-fr="Maintenance informatique" data-en="IT Maintenance">Maintenance informatique</li>
+        <li class="lang-text" data-fr="Support utilisateur" data-en="User Support">Support utilisateur</li>
+        <li class="lang-text" data-fr="Découverte réseaux" data-en="Network Discovery">Découverte réseaux</li>
       </ul>
     </div>
     <div class="card fade-up">
-      <h3>Logistique & travail d’équipe</h3>
+      <h3 class="lang-text" data-fr="Logistique & travail d’équipe" data-en="Logistics & Teamwork">Logistique & travail d’équipe</h3>
       <ul>
-        <li>Organisation</li>
-        <li>Rigueur</li>
-        <li>Responsabilités</li>
+        <li class="lang-text" data-fr="Organisation" data-en="Organization">Organisation</li>
+        <li class="lang-text" data-fr="Rigueur" data-en="Discipline">Rigueur</li>
+        <li class="lang-text" data-fr="Responsabilités" data-en="Responsibilities">Responsabilités</li>
       </ul>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Mes projets académiques</h2>
+  <h2 class="lang-text" data-fr="Mes projets académiques" data-en="Academic Projects">Mes projets académiques</h2>
   <div class="grid">
     <div class="card fade-up">
       <img src="Projet2.jpeg" class="project-img" alt="SAÉ11">
-      <h3>SAÉ11 – Hygiène informatique & cybersécurité</h3>
-      <p>Sensibilisation aux bonnes pratiques de sécurité informatique.</p>
+      <h3 class="lang-text" data-fr="SAÉ11 – Hygiène informatique & cybersécurité" data-en="SAÉ11 – IT Hygiene & Cybersecurity">SAÉ11 – Hygiène informatique & cybersécurité</h3>
+      <p class="lang-text" data-fr="Sensibilisation aux bonnes pratiques de sécurité informatique." data-en="Awareness on IT security best practices.">Sensibilisation aux bonnes pratiques de sécurité informatique.</p>
     </div>
     <div class="card fade-up">
       <img src="projet1.jpeg" class="project-img" alt="SAÉ13">
-      <h3>SAÉ13 – Dispositif de transmission</h3>
-      <p>Découverte et analyse d’un système de transmission de données.</p>
+      <h3 class="lang-text" data-fr="SAÉ13 – Dispositif de transmission" data-en="SAÉ13 – Transmission System">SAÉ13 – Dispositif de transmission</h3>
+      <p class="lang-text" data-fr="Découverte et analyse d’un système de transmission de données." data-en="Discovery and analysis of a data transmission system.">Découverte et analyse d’un système de transmission de données.</p>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>Soft skills</h2>
+  <h2 class="lang-text" data-fr="Soft skills" data-en="Soft Skills">Soft skills</h2>
   <div class="skills fade-up">
-    <span class="skill">Rigueur</span>
-    <span class="skill">Travail d’équipe</span>
-    <span class="skill">Autonomie</span>
-    <span class="skill">Organisation</span>
-    <span class="skill">Adaptabilité</span>
+    <span class="skill lang-text" data-fr="Rigueur" data-en="Discipline">Rigueur</span>
+    <span class="skill lang-text" data-fr="Travail d’équipe" data-en="Teamwork">Travail d’équipe</span>
+    <span class="skill lang-text" data-fr="Autonomie" data-en="Autonomy">Autonomie</span>
+    <span class="skill lang-text" data-fr="Organisation" data-en="Organization">Organisation</span>
+    <span class="skill lang-text" data-fr="Adaptabilité" data-en="Adaptability">Adaptabilité</span>
   </div>
 </section>
 
 <section>
-  <h2>Ma certification</h2>
+  <h2 class="lang-text" data-fr="Ma certification" data-en="My Certification">Ma certification</h2>
   <div class="card fade-up">
     <img src="MC.jpeg" class="project-img" alt="Certification">
-    <p>Formation officielle de l’Agence nationale de la sécurité des systèmes d’information.
-Sensibilisation à la cybersécurité : mots de passe, phishing, protection des données, bonnes pratiques numériques et sécurité des postes de travail.</p>
+    <p class="lang-text" data-fr="Formation officielle de l’Agence nationale de la sécurité des systèmes d’information. Sensibilisation à la cybersécurité : mots de passe, phishing, protection des données, bonnes pratiques numériques et sécurité des postes de travail. Compétences utiles pour un poste de technicien helpdesk et la protection des utilisateurs."
+       data-en="Official training from the National Agency for Information System Security. Awareness of cybersecurity: passwords, phishing, data protection, digital best practices and workstation security. Skills useful for a helpdesk technician role and user protection.">
+       Formation officielle de l’Agence nationale de la sécurité des systèmes d’information...
+    </p>
   </div>
 </section>
 
 <section>
-  <h2>Mes contacts</h2>
+  <h2 class="lang-text" data-fr="Mes contacts" data-en="Contacts">Mes contacts</h2>
   <div class="card fade-up">
-    <p><strong>Email :</strong> sethovoura2@gmail.com</p>
-    <p><strong>Téléphone :</strong> +33 7 58 16 17 83</p>
-    <p><strong>Localisation :</strong> 4 Rue du 4 septembre, Béziers</p>
+    <p><strong>Email:</strong> sethovoura2@gmail.com</p>
+    <p><strong class="lang-text" data-fr="Téléphone" data-en="Phone">Téléphone</strong>: +33 7 58 16 17 83</p>
+    <p><strong class="lang-text" data-fr="Localisation" data-en="Location">Localisation</strong>: 4 Rue du 4 septembre, Béziers</p>
 
     <div class="socials">
       <a href="https://x.com/ovouraseth?s=21" target="_blank">X</a>
@@ -264,23 +290,26 @@ Sensibilisation à la cybersécurité : mots de passe, phishing, protection des 
   </div>
 </section>
 
-<footer>
-© 2025 – Seth Santos OVOURA
-</footer>
+<footer>© 2025 – Seth Santos OVOURA</footer>
 
 <script>
+// Animation fade-up
 const items = document.querySelectorAll('.fade-up');
 const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
+  entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); });
 },{ threshold: 0.15 });
-
 items.forEach(el => observer.observe(el));
+
+// Fonction langue
+function switchLang(lang) {
+  document.querySelectorAll('.lang-text').forEach(el => {
+    el.innerHTML = el.getAttribute(lang === 'fr' ? 'data-fr' : 'data-en');
+  });
+}
+
+// Par défaut : français
+switchLang('fr');
 </script>
 
 </body>
 </html>
-
