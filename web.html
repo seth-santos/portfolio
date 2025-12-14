@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio – Seth Santos OVOURA</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+  line-height: 1.6;
+}
+
+header {
+  background: #020617;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+header img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #38bdf8;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 10px 0 5px;
+}
+
+header p {
+  color: #94a3b8;
+}
+
+section {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #38bdf8;
+  margin-bottom: 25px;
+  border-left: 4px solid #38bdf8;
+  padding-left: 12px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: #020617;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(56,189,248,0.25);
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  border: 1px solid #38bdf8;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.9em;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.socials a {
+  color: #e5e7eb;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.socials a:hover {
+  transform: scale(1.2);
+  color: #38bdf8;
+}
+
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 25px;
+  color: #94a3b8;
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(50px) scale(0.96);
+  filter: blur(6px);
+  transition: all 0.9s cubic-bezier(.16,1,.3,1);
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+/* Bouton CV */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+  color: #020617;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(56,189,248,0.4);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 16px 35px rgba(56,189,248,0.6);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <img src="moi.jpeg" alt="Photo de Seth Santos OVOURA">
+  <h1>Seth Santos OVOURA</h1>
+  <p>Étudiant en BUT Réseaux & Télécommunications – IUT de Béziers</p>
+</header>
+
+<section>
+  <h2>À propos de moi</h2>
+  <div class="card fade-up">
+    <p>
+      Étudiant en <strong>BUT Réseaux & Télécommunications</strong>, je me forme aux réseaux,
+      systèmes et à la cybersécurité avec pour objectif de devenir
+      <strong>technicien helpdesk</strong>.
+      J’apprécie l’assistance utilisateur, la résolution d’incidents
+      et le travail en équipe.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>Télécharger mon CV</h2>
+  <div class="card fade-up" style="text-align:center;">
+    <p>Mon CV est disponible au format PDF :</p>
+    <a href="./CV.pdf" download class="button">⬇ Télécharger mon CV</a>
+  </div>
+</section>
+
+<section>
+  <h2>Mes formations</h2>
+  <div class="grid">
+    <div class="card fade-up">
+      <h3>BUT Réseaux & Télécommunications</h3>
+      <p>IUT de Béziers</p>
+      <p><strong>2025 – 2028</strong></p>
+    </div>
+    <div class="card fade-up">
+      <h3>Baccalauréat</h3>
+      <p>Obtenu en <strong>2025</strong></p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Mes expériences professionnelles</h2>
+  <div class="grid">
+    <div class="card fade-up">
+      <h3>Environnement informatique</h3>
+      <ul>
+        <li>Maintenance informatique</li>
+        <li>Support utilisateur</li>
+        <li>Découverte réseaux</li>
+      </ul>
+    </div>
+    <div class="card fade-up">
+      <h3>Logistique & travail d’équipe</h3>
+      <ul>
+        <li>Organisation</li>
+        <li>Rigueur</li>
+        <li>Responsabilités</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Mes projets académiques</h2>
+  <div class="grid">
+    <div class="card fade-up">
+      <img src="Projet2.jpeg" class="project-img" alt="SAÉ11">
+      <h3>SAÉ11 – Hygiène informatique & cybersécurité</h3>
+      <p>Sensibilisation aux bonnes pratiques de sécurité informatique.</p>
+    </div>
+    <div class="card fade-up">
+      <img src="projet1.jpeg" class="project-img" alt="SAÉ13">
+      <h3>SAÉ13 – Dispositif de transmission</h3>
+      <p>Découverte et analyse d’un système de transmission de données.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Soft skills</h2>
+  <div class="skills fade-up">
+    <span class="skill">Rigueur</span>
+    <span class="skill">Travail d’équipe</span>
+    <span class="skill">Autonomie</span>
+    <span class="skill">Organisation</span>
+    <span class="skill">Adaptabilité</span>
+  </div>
+</section>
+
+<section>
+  <h2>Ma certification</h2>
+  <div class="card fade-up">
+    <img src="MC.jpeg" class="project-img" alt="Certification">
+    <p>Formation officielle de l’Agence nationale de la sécurité des systèmes d’information.
+Sensibilisation à la cybersécurité : mots de passe, phishing, protection des données, bonnes pratiques numériques et sécurité des postes de travail.</p>
+  </div>
+</section>
+
+<section>
+  <h2>Mes contacts</h2>
+  <div class="card fade-up">
+    <p><strong>Email :</strong> sethovoura2@gmail.com</p>
+    <p><strong>Téléphone :</strong> +33 7 58 16 17 83</p>
+    <p><strong>Localisation :</strong> 4 Rue du 4 septembre, Béziers</p>
+
+    <div class="socials">
+      <a href="https://x.com/ovouraseth?s=21" target="_blank">X</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+© 2025 – Seth Santos OVOURA
+</footer>
+
+<script>
+const items = document.querySelectorAll('.fade-up');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+},{ threshold: 0.15 });
+
+items.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
+
